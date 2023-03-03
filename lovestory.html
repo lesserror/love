@@ -10,19 +10,9 @@
     <title>iPersistence</title>
     <style>
         body {
-	    background-color: #8EC5FC;
-            background-image: linear-gradient(31deg, #8EC5FC 0%, #E0C3FC 31%, #ffffff 100%);
-            -webkit-font-smoothing: antialiased;
-            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-            background-image: url('https://github.com/lesserror/pictures_repository/blob/b7f2d1b601c96a74584cd582c14f5df23354d714/B35A50A8-6912-4BB2-9812-50D0FFB8D0B0.jpeg');
-	    <!--> 
-		background-image: url('https://raw.githubusercontent.com/we11cheng/we11cheng.github.io/master/bg.jpg');
-		background-image: url('https://github.com/lesserror/pictures_repository/blob/main/B35A50A8-6912-4BB2-9812-50D0FFB8D0B0.jpeg');
-	    <img src="https://github.com/lesserror/pictures_repository/blob/main/B35A50A8-6912-4BB2-9812-50D0FFB8D0B0.jpeg">
-	    <meta name="referrer" content="no-referrer" />
-	    <!-->
-            font-size: 85%;
-            margin: 0;
+	    background-color: #FAACA8;
+    	    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    	    background: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
         }
         
         h2 {
@@ -81,33 +71,25 @@
             document.getElementById('s').innerHTML = s;
         }
         timer();
-    </script>
-    <!-->
-    <script language="javascript">
-	    function show_date_time() {
-	        window.setTimeout("show_date_time()", 1000);
-	        BirthDay = new Date("04/08/2021 00:00:00");//这个日期是可以修改的
-	        today = new Date();
-	        timeold = (today.getTime() - BirthDay.getTime());
-	        sectimeold = timeold / 1000
-	        secondsold = Math.floor(sectimeold);
-	        msPerDay = 24 * 60 * 60 * 1000
-	        e_daysold = timeold / msPerDay
-	        daysold = Math.floor(e_daysold);
-	        e_hrsold = (e_daysold - daysold) * 24;
-	        hrsold = Math.floor(e_hrsold);
-	        e_minsold = (e_hrsold - hrsold) * 60;
-	        minsold = Math.floor((e_hrsold - hrsold) * 60);
-	        seconds = Math.floor((e_minsold - minsold) * 60);
-          document.getElementById('d').innerHTML = daysold;
-          document.getElementById('h').innerHTML = hrsold;
-          document.getElementById('m').innerHTML = minsold;
-          document.getElementById('s').innerHTML = seconds;
-	    }
-	    show_date_time();
+	    
 	</script>
-  <!-->
+    	<script type="text/javascript">
+		window.onload = function(){
+			 setInterval("toggleSound()",1);
+		    }
+    
+		function toggleSound() {
+			    var music = document.getElementById("music");//获取ID  
+			    if (music.paused) { //判读是否播放  
+			    // music.paused=false;
+			    music.play(); //没有就播放 
+			    }
+		    }
 
+    </script>
+    
+    <audio src="audio/a_little_sweet.mp3" id="music" autoplay></audio>
+	    
 </body>
 
 </html>
